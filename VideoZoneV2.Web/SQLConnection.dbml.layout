@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SQLConnection">
+  <DataContextMoniker Name="/SQLConnectionDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9cbe8908-e67d-4283-808b-8ba802529af1" absoluteBounds="4.75, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SQLConnectionDataContext/Message" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b91532db-dc8a-4a07-8b4f-3eb092ba212b" absoluteBounds="4.7650000000000006, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c63a521a-36eb-4afa-b55f-854cf5ac6da8" absoluteBounds="2.625, 3.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SQLConnectionDataContext/SecurityQuestion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d0fcda2-a5eb-44f1-a243-4e83897fb470" absoluteBounds="2.6400000000000006, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f5a4e5e-faf0-4545-aefa-1323ec3b191e" absoluteBounds="2.625, 0.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SQLConnectionDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="592b7613-5d0e-49d3-96d9-4e14523a0487" absoluteBounds="2.6400000000000006, 0.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="93903e08-f26c-4dd5-a78c-379aa15b0f6f" absoluteBounds="0.5, 5.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SQLConnectionDataContext/VideoMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa65fd57-11e4-466f-b8c0-931be521b587" absoluteBounds="0.51500000000000012, 6.3350000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c7c2305-b6a7-4c73-80cd-fad5554b1a1d" absoluteBounds="4.75, 4.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SQLConnectionDataContext/viewMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ae11050-280c-4611-b2f6-db669e6af385" absoluteBounds="4.765, 5.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a715503f-9589-4af8-b594-e02b2a17f342" absoluteBounds="4.75, 3, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SQLConnectionDataContext/vMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92aaff2b-1ab6-4639-9040-56db99dd0b9b" absoluteBounds="4.7650000000000006, 3.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3878c176-2c0f-4ca8-ae0d-6bbdc274cba2" absoluteBounds="2.625, 4.75, 2, 1.0016910807291668">
+      <DataClassMoniker Name="/SQLConnectionDataContext/viewUsername" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7797f2f-3435-48a8-946a-815dc6db006b" absoluteBounds="2.6399999999999997, 5.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="743426f6-5b4a-4740-a2a5-58cff995f1ef" absoluteBounds="0.5, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SQLConnectionDataContext/Video" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d522c45-f7e2-4149-ab14-9af46927e4bb" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a29dd45d-5acc-4aac-9351-edc5435dcacd" absoluteBounds="0.5, 4.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SQLConnectionDataContext/viewSharedVideo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45e55964-96ff-4a1e-863f-4896ba31cc27" absoluteBounds="0.51500000000000012, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="349f02fd-d5ac-41e2-b9e6-e17a8c07fc6d" absoluteBounds="0.5, 2.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SQLConnectionDataContext/viewVideo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9b426b1-187c-49fb-8fe5-048aa8771731" absoluteBounds="0.51500000000000012, 2.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

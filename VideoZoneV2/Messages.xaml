@@ -1,0 +1,35 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="VideoZoneV2.Messages"
+    mc:Ignorable="d" Height="403.759" Width="740.517">
+
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-37,-58" HorizontalAlignment="Left" Width="778" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <sdk:DataGrid HorizontalAlignment="Left" Margin="31,80,0,125" Width="620" Grid.Row="1" x:Name="dgViewMsgs" IsReadOnly="True" 
+                      Background="Transparent" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Cursor="Arrow" IsTabStop="False" SelectionChanged="dgViewMsgs_SelectionChanged"/>
+        <sdk:Label x:Name="lbl1" HorizontalAlignment="Left" Height="28" Margin="31,408,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="subject" HorizontalAlignment="Left" Height="64" Margin="43,10,0,0" VerticalAlignment="Top" Width="461" Stretch="None" Source="Images/Messages.png"/>
+        <Image x:Name="Delete" HorizontalAlignment="Left" Height="59" Margin="36,21,0,0" VerticalAlignment="Top" Width="107" Stretch="None" Source="Images/Delete.png" Grid.Row="1" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="0"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="View" HorizontalAlignment="Left" Height="48" Margin="143,21,0,0" VerticalAlignment="Top" Width="80" Stretch="None" Source="Images/View.png" Grid.Row="1" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="0"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="WriteMsg" HorizontalAlignment="Left" Height="59" Margin="282,21,0,0" VerticalAlignment="Top" Width="172" Stretch="None" Source="Images/WriteMessage.png" Grid.Row="1" />
+        <Image x:Name="Back" HorizontalAlignment="Left" Height="59" Margin="525,21,0,0" VerticalAlignment="Top" Width="107" Stretch="None" Source="Images/Back.png" Grid.Row="1" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+    </Grid>
+</UserControl>

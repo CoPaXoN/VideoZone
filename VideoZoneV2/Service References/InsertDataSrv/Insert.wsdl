@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Insert" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50939/Insert.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50939/Insert.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50939/Insert.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VideoZoneV2.Web" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Insert_InsertData_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertData" />
+  </wsdl:message>
+  <wsdl:message name="Insert_InsertData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_findUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:findUsername" />
+  </wsdl:message>
+  <wsdl:message name="Insert_findUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_findEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:findEmail" />
+  </wsdl:message>
+  <wsdl:message name="Insert_findEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_findVideoName_InputMessage">
+    <wsdl:part name="parameters" element="tns:findVideoName" />
+  </wsdl:message>
+  <wsdl:message name="Insert_findVideoName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findVideoNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_UpdData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdData" />
+  </wsdl:message>
+  <wsdl:message name="Insert_UpdData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Select" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectAnswer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAnswer" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectAnswer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_ResetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="Insert_ResetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectByUsername" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SignIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignIn" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SignIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignInResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectMsgs_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMsgs" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectMsgs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMsgsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectViewMsgs_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectViewMsgs" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectViewMsgs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectViewMsgsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectLastMsgId_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectLastMsgId" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectLastMsgId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectLastMsgIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SendMsg_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMsg" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SendMsg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMsgResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DeleteMsg_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMsg" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DeleteMsg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMsgResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DeleteMsgs_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMsgs" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DeleteMsgs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMsgsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectMsg_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMsg" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectMsg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectMsgResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_CountUnreadedMsgs_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountUnreadedMsgs" />
+  </wsdl:message>
+  <wsdl:message name="Insert_CountUnreadedMsgs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountUnreadedMsgsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_isUsernamesExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:isUsernamesExist" />
+  </wsdl:message>
+  <wsdl:message name="Insert_isUsernamesExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isUsernamesExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_findVideo_InputMessage">
+    <wsdl:part name="parameters" element="tns:findVideo" />
+  </wsdl:message>
+  <wsdl:message name="Insert_findVideo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectVideo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVideo" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectVideo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DeleteVideo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVideo" />
+  </wsdl:message>
+  <wsdl:message name="Insert_DeleteVideo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectSharedVideos_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSharedVideos" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectSharedVideos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSharedVideosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectVideos_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVideos" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SelectVideos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectVideosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_UpdateVideo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVideo" />
+  </wsdl:message>
+  <wsdl:message name="Insert_UpdateVideo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SearchVideos_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchVideos" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SearchVideos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchVideosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SearchUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUsers" />
+  </wsdl:message>
+  <wsdl:message name="Insert_SearchUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUsersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Insert">
+    <wsdl:operation name="InsertData">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/InsertData" message="tns:Insert_InsertData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/InsertDataResponse" message="tns:Insert_InsertData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/findUsername" message="tns:Insert_findUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/findUsernameResponse" message="tns:Insert_findUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/findEmail" message="tns:Insert_findEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/findEmailResponse" message="tns:Insert_findEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findVideoName">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/findVideoName" message="tns:Insert_findVideoName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/findVideoNameResponse" message="tns:Insert_findVideoName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdData">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/UpdData" message="tns:Insert_UpdData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/UpdDataResponse" message="tns:Insert_UpdData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Select">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/Select" message="tns:Insert_Select_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectResponse" message="tns:Insert_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAnswer">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SelectAnswer" message="tns:Insert_SelectAnswer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectAnswerResponse" message="tns:Insert_SelectAnswer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/ResetPassword" message="tns:Insert_ResetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/ResetPasswordResponse" message="tns:Insert_ResetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SelectByUsername" message="tns:Insert_SelectByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectByUsernameResponse" message="tns:Insert_SelectByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SignIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SignIn" message="tns:Insert_SignIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SignInResponse" message="tns:Insert_SignIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/Delete" message="tns:Insert_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/DeleteResponse" message="tns:Insert_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMsgs">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SelectMsgs" message="tns:Insert_SelectMsgs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectMsgsResponse" message="tns:Insert_SelectMsgs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectViewMsgs">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SelectViewMsgs" message="tns:Insert_SelectViewMsgs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectViewMsgsResponse" message="tns:Insert_SelectViewMsgs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLastMsgId">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SelectLastMsgId" message="tns:Insert_SelectLastMsgId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectLastMsgIdResponse" message="tns:Insert_SelectLastMsgId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMsg">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SendMsg" message="tns:Insert_SendMsg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SendMsgResponse" message="tns:Insert_SendMsg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMsg">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/DeleteMsg" message="tns:Insert_DeleteMsg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/DeleteMsgResponse" message="tns:Insert_DeleteMsg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMsgs">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/DeleteMsgs" message="tns:Insert_DeleteMsgs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/DeleteMsgsResponse" message="tns:Insert_DeleteMsgs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectMsg">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SelectMsg" message="tns:Insert_SelectMsg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectMsgResponse" message="tns:Insert_SelectMsg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountUnreadedMsgs">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/CountUnreadedMsgs" message="tns:Insert_CountUnreadedMsgs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/CountUnreadedMsgsResponse" message="tns:Insert_CountUnreadedMsgs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isUsernamesExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/isUsernamesExist" message="tns:Insert_isUsernamesExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/isUsernamesExistResponse" message="tns:Insert_isUsernamesExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findVideo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/findVideo" message="tns:Insert_findVideo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/findVideoResponse" message="tns:Insert_findVideo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectVideo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SelectVideo" message="tns:Insert_SelectVideo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectVideoResponse" message="tns:Insert_SelectVideo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVideo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/DeleteVideo" message="tns:Insert_DeleteVideo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/DeleteVideoResponse" message="tns:Insert_DeleteVideo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSharedVideos">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SelectSharedVideos" message="tns:Insert_SelectSharedVideos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectSharedVideosResponse" message="tns:Insert_SelectSharedVideos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectVideos">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SelectVideos" message="tns:Insert_SelectVideos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SelectVideosResponse" message="tns:Insert_SelectVideos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVideo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/UpdateVideo" message="tns:Insert_UpdateVideo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/UpdateVideoResponse" message="tns:Insert_UpdateVideo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchVideos">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SearchVideos" message="tns:Insert_SearchVideos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SearchVideosResponse" message="tns:Insert_SearchVideos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/Insert/SearchUsers" message="tns:Insert_SearchUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Insert/SearchUsersResponse" message="tns:Insert_SearchUsers_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Insert" type="tns:Insert">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertData">
+      <soap:operation soapAction="http://tempuri.org/Insert/InsertData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUsername">
+      <soap:operation soapAction="http://tempuri.org/Insert/findUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findEmail">
+      <soap:operation soapAction="http://tempuri.org/Insert/findEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findVideoName">
+      <soap:operation soapAction="http://tempuri.org/Insert/findVideoName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdData">
+      <soap:operation soapAction="http://tempuri.org/Insert/UpdData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Select">
+      <soap:operation soapAction="http://tempuri.org/Insert/Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAnswer">
+      <soap:operation soapAction="http://tempuri.org/Insert/SelectAnswer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap:operation soapAction="http://tempuri.org/Insert/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectByUsername">
+      <soap:operation soapAction="http://tempuri.org/Insert/SelectByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignIn">
+      <soap:operation soapAction="http://tempuri.org/Insert/SignIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/Insert/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMsgs">
+      <soap:operation soapAction="http://tempuri.org/Insert/SelectMsgs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectViewMsgs">
+      <soap:operation soapAction="http://tempuri.org/Insert/SelectViewMsgs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLastMsgId">
+      <soap:operation soapAction="http://tempuri.org/Insert/SelectLastMsgId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMsg">
+      <soap:operation soapAction="http://tempuri.org/Insert/SendMsg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMsg">
+      <soap:operation soapAction="http://tempuri.org/Insert/DeleteMsg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMsgs">
+      <soap:operation soapAction="http://tempuri.org/Insert/DeleteMsgs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectMsg">
+      <soap:operation soapAction="http://tempuri.org/Insert/SelectMsg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountUnreadedMsgs">
+      <soap:operation soapAction="http://tempuri.org/Insert/CountUnreadedMsgs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isUsernamesExist">
+      <soap:operation soapAction="http://tempuri.org/Insert/isUsernamesExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findVideo">
+      <soap:operation soapAction="http://tempuri.org/Insert/findVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectVideo">
+      <soap:operation soapAction="http://tempuri.org/Insert/SelectVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVideo">
+      <soap:operation soapAction="http://tempuri.org/Insert/DeleteVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSharedVideos">
+      <soap:operation soapAction="http://tempuri.org/Insert/SelectSharedVideos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectVideos">
+      <soap:operation soapAction="http://tempuri.org/Insert/SelectVideos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVideo">
+      <soap:operation soapAction="http://tempuri.org/Insert/UpdateVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchVideos">
+      <soap:operation soapAction="http://tempuri.org/Insert/SearchVideos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <soap:operation soapAction="http://tempuri.org/Insert/SearchUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Insert">
+    <wsdl:port name="BasicHttpBinding_Insert" binding="tns:BasicHttpBinding_Insert">
+      <soap:address location="http://localhost:50939/Insert.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

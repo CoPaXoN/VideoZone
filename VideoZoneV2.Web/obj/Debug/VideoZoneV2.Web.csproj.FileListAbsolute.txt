@@ -1,0 +1,12 @@
+c:\users\hi\documents\visual studio 2012\Projects\VideoZoneV2\VideoZoneV2.Web\obj\Debug\VideoZoneV2.Web.csprojResolveAssemblyReference.cache
+c:\users\hi\documents\visual studio 2012\Projects\VideoZoneV2\VideoZoneV2.Web\bin\VideoZoneV2.Web.dll
+c:\users\hi\documents\visual studio 2012\Projects\VideoZoneV2\VideoZoneV2.Web\bin\VideoZoneV2.Web.pdb
+c:\users\hi\documents\visual studio 2012\Projects\VideoZoneV2\VideoZoneV2.Web\obj\Debug\VideoZoneV2.Web.dll
+c:\users\hi\documents\visual studio 2012\Projects\VideoZoneV2\VideoZoneV2.Web\obj\Debug\VideoZoneV2.Web.pdb
+C:\Users\CoPaXoN\Downloads\VideoZoneV2\VideoZoneV2.Web\bin\VideoZoneV2.Web.dll.config
+C:\Users\CoPaXoN\Downloads\VideoZoneV2\VideoZoneV2.Web\bin\VideoZoneV2.Web.dll
+C:\Users\CoPaXoN\Downloads\VideoZoneV2\VideoZoneV2.Web\bin\VideoZoneV2.Web.pdb
+C:\Users\CoPaXoN\Downloads\VideoZoneV2\VideoZoneV2.Web\obj\Debug\VideoZoneV2.Web.csprojAssemblyReference.cache
+C:\Users\CoPaXoN\Downloads\VideoZoneV2\VideoZoneV2.Web\obj\Debug\VideoZoneV2.Web.csproj.CoreCompileInputs.cache
+C:\Users\CoPaXoN\Downloads\VideoZoneV2\VideoZoneV2.Web\obj\Debug\VideoZoneV2.Web.dll
+C:\Users\CoPaXoN\Downloads\VideoZoneV2\VideoZoneV2.Web\obj\Debug\VideoZoneV2.Web.pdb

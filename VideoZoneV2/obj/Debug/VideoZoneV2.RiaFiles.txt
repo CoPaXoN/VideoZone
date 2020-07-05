@@ -1,0 +1,2 @@
+C:\Users\Hi\Documents\Visual Studio 2012\Projects\VideoZoneV2\VideoZoneV2
+Generated_Code\VideoZoneV2.Web.g.cs

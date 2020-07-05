@@ -1,0 +1,36 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="VideoZoneV2.WatchVideo"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-521,-524">
+
+        <sdk:Label HorizontalAlignment="Left" Height="47" Margin="10,10,0,0" VerticalAlignment="Top" Width="490"
+                   x:Name="lblVideoname" FontSize="36"/>
+        <MediaElement HorizontalAlignment="Left" Height="253" Margin="10,57,0,0" VerticalAlignment="Top" Source="" AutoPlay="False" Volume="{Binding Value, ElementName=soundSlider}"  Width="490" x:Name="VideoPlayer"
+                       Stretch="Fill" DownloadProgressChanged="setTimeSpan"/>
+        <Slider x:Name="positionSlider" HorizontalAlignment="Left" Margin="10,315,0,0" VerticalAlignment="Top" Width="490" Value="{Binding Position.Seconds, ElementName=VideoPlayer, Mode=OneWay}" MouseLeftButtonUp="setPostition" ValueChanged="positionSlider_ValueChanged"/>
+        <Slider x:Name="soundSlider" HorizontalAlignment="Left" Cursor="Hand" Orientation="Vertical" Value="0.5" Maximum="1" LargeChange="0.1" Margin="170,333,0,0" VerticalAlignment="Top" Height="55" Width="49" ToolTipService.ToolTip="{Binding Value, ElementName=soundSlider}"/>
+        <TextBlock x:Name="videoPosition" HorizontalAlignment="Left" Text="{Binding Position, ElementName=VideoPlayer, Mode=TwoWay, UpdateSourceTrigger=Explicit}" Margin="224,346,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22"/>
+        
+        
+        
+      
+       
+        
+        
+        <Image x:Name="PlayBtn" MouseLeftButtonUp="PlayBtn_Click" HorizontalAlignment="Left" Height="71" Margin="10,338,0,0" VerticalAlignment="Top" Width="89" Stretch="None" Source="Images/Play.png" />
+        <Image x:Name="PauseBtn" MouseLeftButtonUp="PauseBtn_Click" Visibility="Collapsed" HorizontalAlignment="Left" Height="71" Margin="10,338,0,0" VerticalAlignment="Top" Width="89" Stretch="None" Source="Images/Play.png" />
+        <Image x:Name="StopBtn" MouseLeftButtonUp="StopBtn_Click" HorizontalAlignment="Left" Height="71" Margin="99,338,0,0" VerticalAlignment="Top" Width="89" Stretch="None" Source="Images/Stop.png" />
+        <Image x:Name="DownloadBtn" MouseLeftButtonUp="DownloadBtn_Click" HorizontalAlignment="Left" Height="50" Margin="353,338,0,0" VerticalAlignment="Top" Width="134" Stretch="None" Source="Images/Download.png" />
+        <Image x:Name="Back" MouseLeftButtonUp="Button_Click" HorizontalAlignment="Left" Height="50" Margin="487,338,0,0" VerticalAlignment="Top" Width="92" Stretch="None" Source="Images/Back.png" />
+
+
+
+
+    </Grid>
+</UserControl>

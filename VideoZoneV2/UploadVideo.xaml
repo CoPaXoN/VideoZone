@@ -1,0 +1,68 @@
+﻿<UserControl xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:controls="clr-namespace:VideoZoneV2"   
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  
+    x:Class="VideoZoneV2.UploadVideo"   
+    xmlns:DataValidations="clr-namespace:VideoZoneV2.Validations"
+    >
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,0,0" Height="575" Width="617">
+
+        <StackPanel Orientation="Vertical" Margin="10,265,10,-27">
+            <Button Margin="99,5,98,5" x:Name="FileButton" Width="400"  Content="Choose File to upload" Click="FileButton_Click"/>
+            <sdk:DataGrid x:Name="FileList" AutoGenerateColumns="False" Height="200" HeadersVisibility="All" IsReadOnly="True" Visibility="Collapsed">
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTemplateColumn Width="300" Header="File Name">
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <HyperlinkButton  Margin="3" TargetName="_blank" Content="{Binding Name}" NavigateUri="{Binding FileStoreUrl}" IsEnabled="{Binding Loaded}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+
+                    <sdk:DataGridTextColumn  Binding="{Binding Size}" Header="Size (KB)"/>
+
+                    <sdk:DataGridTemplateColumn Header="Progress">
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid Margin="3">
+                                    <ProgressBar Margin="3" Width="100" Height="15" Minimum="0" Maximum="100" Value="{Binding UploadPercentage}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+
+                    <sdk:DataGridTemplateColumn Header="Loaded">
+                        <sdk:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid Margin="3">
+                                    <CheckBox IsChecked="{Binding Loaded}" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </DataTemplate>
+                        </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+        </StackPanel>
+        <TextBox x:Name="txtVideoName" HorizontalAlignment="Left" Height="23" Margin="92,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332"
+                 Text="{Binding Path=VideoName, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+                 DataValidations:UpdateSource.UpdateSourceTrigger="True" TextChanged="txtVideoName_TextChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="10,104,0,0" VerticalAlignment="Top" Width="120" Content=" Video Name:"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="0,75,0,0" VerticalAlignment="Top" Width="120" Content=" Hello" x:Name="lbl1"/>
+        <sdk:Label HorizontalAlignment="Left" Height="16" Margin="10,132,0,0" VerticalAlignment="Top" Width="73" Content=" Category:"/>
+        <ComboBox Margin="96,132,193,423" x:Name="cbCategory" SelectionChanged="cbCategory_SelectionChanged"
+                  />
+        <sdk:ValidationSummary Margin="17,300,10,164" x:Name="vldSum" />
+        <Button Content="Back" HorizontalAlignment="Left" Margin="379,213,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" Margin="10,164,0,0" VerticalAlignment="Top" Width="54" Content="Share to:"/>
+        <TextBox x:Name="ShareTxt" HorizontalAlignment="Left" IsEnabled="False" Height="33" Margin="17,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" TextChanged="ShareTxt_TextChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="169,185,0,0" VerticalAlignment="Top" Width="300" Content="(Separate multiple user names with a semi-colon ',')"/>
+        <CheckBox x:Name="EveryoneCb" IsChecked="true" Content="everyone" HorizontalAlignment="Left" Margin="92,163,0,0" VerticalAlignment="Top" Checked="EveryoneCb_Checked" Unchecked="EveryoneCb_Unchecked" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,185,0,0" TextWrapping="Wrap" Text="or share to specific users:" VerticalAlignment="Top"/>
+        <Image x:Name="subject" HorizontalAlignment="Left" Height="64" Margin="43,10,0,0" VerticalAlignment="Top" Width="461" Stretch="None" Source="Images/UploadVideo.png"/>
+
+    </Grid>
+</UserControl>

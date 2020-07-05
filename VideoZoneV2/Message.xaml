@@ -1,0 +1,27 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="VideoZoneV2.Message"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-240,-318">
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="120,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" x:Name="txtSentTo"
+                 Text="{Binding Path=Username, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" TextChanged="txtSentTo_TextChanged" />
+
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="50,111,0,0" VerticalAlignment="Top" Width="36" Content="To:"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="50,139,0,0" VerticalAlignment="Top" Width="120" Content="Subject:"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="120,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" x:Name="txtSubject"
+                 Text="{Binding Path=Subject, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}" TextChanged="txtSubject_TextChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="50,172,0,0" VerticalAlignment="Top" Width="120" Content="Content:"/>
+        <TextBox HorizontalAlignment="Left" Height="72" Margin="120,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" x:Name="txtContent" TextChanged="txtContent_TextChanged"
+                 Text="{Binding Path=Content, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, ValidatesOnExceptions=True, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+        <sdk:ValidationSummary x:Name="vldSum" Margin="50,244,0,0" HorizontalAlignment="Left" Width="438" Height="94" VerticalAlignment="Top" Visibility="Visible" />
+        <Image x:Name="subject" HorizontalAlignment="Left" Height="64" Margin="43,10,0,0" VerticalAlignment="Top" Width="461" Stretch="None" Source="Images/Message.png"/>
+        <Image x:Name="Send" HorizontalAlignment="Left" Height="50" Margin="104,358,0,0" VerticalAlignment="Top" Width="77" Stretch="None" Source="Images/Send.png" />
+        <Image x:Name="Back" HorizontalAlignment="Left" Height="50" Margin="351,358,0,0" VerticalAlignment="Top" Width="92" Stretch="None" Source="Images/Back.png" />
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:Validations="clr-namespace:VideoZoneV2.Validations" x:Class="VideoZoneV2.Profile"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-388,-18">
+
+        <sdk:Label HorizontalAlignment="Left" Height="68" Margin="45,38,0,0" VerticalAlignment="Top" Width="733" Content="Profile's" FontSize="48" 
+			x:Name="lblProfile"/>
+
+        <TextBlock x:Name="textBlock4" VerticalAlignment="Top" Text="Email:" RenderTransformOrigin="0.1,2.826" Margin="23,118,0,0" Height="23" HorizontalAlignment="Left"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="23,147,0,0" x:Name="textBlock4_Copy" VerticalAlignment="Top" RenderTransformOrigin="0.533,2.043" Width="93" Text="Date of birth:" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="23,175,0,0" x:Name="textBlock4_Copy1" VerticalAlignment="Top" RenderTransformOrigin="0.533,2.043" Width="93" Text="Address:" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="23,201,0,0" x:Name="textBlock4_Copy2" VerticalAlignment="Top" RenderTransformOrigin="0.533,2.043" Width="93" Text="Phone Number:" />
+        <TextBlock HorizontalAlignment="Left" Margin="155,118,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" x:Name="tbEmail"/>
+        <TextBlock HorizontalAlignment="Left" Margin="155,147,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" x:Name="tbDob"/>
+        <TextBlock HorizontalAlignment="Left" Margin="155,175,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" x:Name="tbAdress"/>
+        <TextBlock HorizontalAlignment="Left" Margin="155,201,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" x:Name="tbPN"/>
+        <Image x:Name="Back_Copy" MouseLeftButtonUp="Button_Click" HorizontalAlignment="Left" Height="59" Margin="220,224,0,0" VerticalAlignment="Top" Width="107" Stretch="None" Source="Images/Back.png" RenderTransformOrigin="0.084,0.508" />
+        <Image x:Name="Back_Copy1" MouseLeftButtonUp="Back_Copy1_MouseLeftButtonUp" HorizontalAlignment="Left" Height="59" Margin="0,224,0,0" VerticalAlignment="Top" Width="175" Stretch="None" Source="Images/WriteMessage.png" RenderTransformOrigin="0.084,0.508" />
+
+    </Grid>
+</UserControl>

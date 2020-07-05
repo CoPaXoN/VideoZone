@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48A96632-5E63-42B5-9BF6-EFAA8319CA0B}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VideoZoneV2</RootNamespace>
+    <AssemblyName>VideoZoneV2</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>VideoZoneV2.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>VideoZoneV2.App</SilverlightAppEntry>
+    <TestPageFileName>VideoZoneV2TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>..\VideoZoneV2.Web\VideoZoneV2.Web.csproj</LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Client.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web.Extensions, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core">
+      <HintPath>$(TargetFrameworkDirectory)System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Index.xaml.cs">
+      <DependentUpon>Index.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Message.xaml.cs">
+      <DependentUpon>Message.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox.xaml.cs">
+      <DependentUpon>MessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.xaml.cs">
+      <DependentUpon>Messages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModalControl.cs" />
+    <Compile Include="MyVideos.xaml.cs">
+      <DependentUpon>MyVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopupExtensions.cs" />
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.xaml.cs">
+      <DependentUpon>ResetPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InsertDataSrv\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UploadService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SharedVideos.xaml.cs">
+      <DependentUpon>SharedVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Update.xaml.cs">
+      <DependentUpon>Update.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateVideo.xaml.cs">
+      <DependentUpon>UpdateVideo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UploadVideo.xaml.cs">
+      <DependentUpon>UploadVideo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Validations\BindingModel.cs" />
+    <Compile Include="Validations\BindingModelBase.cs" />
+    <Compile Include="Validations\BooleanToNumberConverter.cs" />
+    <Compile Include="Validations\DelegeteCommand.cs" />
+    <Compile Include="Validations\PropertyValidation.cs" />
+    <Compile Include="Validations\UpdateSource.cs" />
+    <Compile Include="ViewMessage.xaml.cs">
+      <DependentUpon>ViewMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WatchVideo.xaml.cs">
+      <DependentUpon>WatchVideo.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\InsertDataSrv\Insert.disco" />
+    <None Include="Service References\InsertDataSrv\configuration91.svcinfo" />
+    <None Include="Service References\InsertDataSrv\configuration.svcinfo" />
+    <None Include="Service References\InsertDataSrv\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\InsertDataSrv\VideoZoneV2.InsertDataSrv.viewSharedVideo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InsertDataSrv\VideoZoneV2.InsertDataSrv.viewUsername.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InsertDataSrv\VideoZoneV2.InsertDataSrv.viewVideo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UploadService\Upload.disco" />
+    <None Include="Service References\UploadService\configuration91.svcinfo" />
+    <None Include="Service References\UploadService\configuration.svcinfo" />
+    <None Include="Service References\UploadService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Images\Back.png" />
+    <Resource Include="Images\Delete.png" />
+    <Resource Include="Images\Regist.png" />
+    <Resource Include="Images\Registration.png" />
+    <Resource Include="Images\Search.png" />
+    <Resource Include="Images\SearchLogo.png" />
+    <Resource Include="Images\SeeUploadedVideos.png" />
+    <Resource Include="Images\Send.png" />
+    <Resource Include="Images\SignIn.png" />
+    <Resource Include="Images\Update.png" />
+    <Resource Include="Images\UpdateBtn.png" />
+    <Resource Include="Images\UploadBtn.png" />
+    <Resource Include="Images\VideoZone.png" />
+    <Resource Include="Images\BackMouseOver.png" />
+    <Resource Include="Images\ChooseFile.png" />
+    <Resource Include="Images\ChooseFileMouseOver.png" />
+    <Resource Include="Images\DeleteMouseOver.png" />
+    <Resource Include="Images\Download.png" />
+    <Resource Include="Images\DownloadMouseOver.png" />
+    <Resource Include="Images\Edit.png" />
+    <Resource Include="Images\EditMouseOver.png" />
+    <Resource Include="Images\Index.png" />
+    <Resource Include="Images\Message.png" />
+    <Resource Include="Images\Messages.png" />
+    <Resource Include="Images\MyVideos.png" />
+    <Resource Include="Images\Next.png" />
+    <Resource Include="Images\NextMouseOver.png" />
+    <Resource Include="Images\Pause.png" />
+    <Resource Include="Images\PauseMouseOver.png" />
+    <Resource Include="Images\Play.png" />
+    <Resource Include="Images\PlayMouseOver.png" />
+    <Resource Include="Images\RegistMouseOver.png" />
+    <Resource Include="Images\Replay.png" />
+    <Resource Include="Images\ReplayLogo.png" />
+    <Resource Include="Images\ReplayMouseOver.png" />
+    <Resource Include="Images\Reset.png" />
+    <Resource Include="Images\ResetMouseOver.png" />
+    <Resource Include="Images\ResetPassword.png" />
+    <Resource Include="Images\SearchMouseOver.png" />
+    <Resource Include="Images\SeeUploadedVideosMouseOver.png" />
+    <Resource Include="Images\SendMouseOver.png" />
+    <Resource Include="Images\Stop.png" />
+    <Resource Include="Images\StopMouseOver.png" />
+    <Resource Include="Images\UpdateMouseOver.png" />
+    <Resource Include="Images\UpdateVideo.png" />
+    <Resource Include="Images\Upload.png" />
+    <Resource Include="Images\UploadMouseOver.png" />
+    <Resource Include="Images\UploadVideo.png" />
+    <Resource Include="Images\View.png" />
+    <Resource Include="Images\ViewMouseOver.png" />
+    <Resource Include="Images\WriteMessage.png" />
+    <Resource Include="Images\WriteMessageMouseOver.png" />
+    <Resource Include="Images\SharedVideos.png" />
+    <Resource Include="Images\LogOut.png" />
+    <Resource Include="Images\LogOutMouseOver.png" />
+    <Resource Include="Images\SignInMouseOver.png" />
+    <Resource Include="Images\Wacth.png" />
+    <Resource Include="Images\WatchMouseOver.png" />
+    <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\InsertDataSrv\Insert.wsdl" />
+    <None Include="Service References\InsertDataSrv\Insert.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InsertDataSrv\Insert1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InsertDataSrv\Insert2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InsertDataSrv\VideoZoneV2.InsertDataSrv.Message.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InsertDataSrv\VideoZoneV2.InsertDataSrv.vMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UploadService\Upload.wsdl" />
+    <None Include="Service References\UploadService\Upload.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UploadService\Upload1.wsdl" />
+    <None Include="Service References\UploadService\Upload1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UploadService\Upload2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UploadService\VideoZoneV2.UploadService.UploadFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Index.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Message.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Messages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyVideos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Profile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Registration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ResetPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Search.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SharedVideos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Update.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UpdateVideo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UploadVideo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewMessage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WatchVideo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VideoZone.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\InsertDataSrv\" />
+    <WCFMetadataStorage Include="Service References\UploadService\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

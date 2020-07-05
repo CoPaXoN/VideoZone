@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="VideoZoneDB" Class="SQLConnectionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=VideoZoneDB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="VideoZoneDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Messages" Member="Messages">
+    <Type Name="Message">
+      <Column Name="MsgID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="MsgContent" Type="System.String" DbType="NChar(900)" CanBeNull="true" />
+      <Column Name="SentFrom" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="SentTo" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="IsRead" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SentDate" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SecurityQuestions" Member="SecurityQuestions">
+    <Type Name="SecurityQuestion">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SecurityQuestion" Member="SecurityQuestion1" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Username" Type="System.String" DbType="NChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfBirth" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NChar(11)" CanBeNull="true" />
+      <Column Name="SecurityQuestionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsBanned" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VideoMessages" Member="VideoMessages">
+    <Type Name="VideoMessage">
+      <Column Name="VideoName" Type="System.String" DbType="NChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserUploaded" Type="System.String" DbType="NChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Publisher" Type="System.String" DbType="NChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostContent" Type="System.String" DbType="NChar(999)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewMessage" Member="viewMessages">
+    <Type Name="viewMessage">
+      <Column Name="MsgID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="MsgContent" Type="System.String" DbType="NChar(900)" CanBeNull="true" />
+      <Column Name="SentFrom" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vMessages" Member="vMessages">
+    <Type Name="vMessage">
+      <Column Name="MsgID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="SentFrom" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="SentTo" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="SentDate" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewUsernames" Member="viewUsernames">
+    <Type Name="viewUsername">
+      <Column Name="Username" Type="System.String" DbType="NChar(25) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Videos" Member="Videos">
+    <Type Name="Video">
+      <Column Name="VideoName" Type="System.String" DbType="NChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FilePath" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="SharedTo" Type="System.String" DbType="NChar(999)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewSharedVideos" Member="viewSharedVideos">
+    <Type Name="viewSharedVideo">
+      <Column Name="VideoName" Type="System.String" DbType="NChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="SharedTo" Type="System.String" DbType="NChar(999)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.viewVideos" Member="viewVideos">
+    <Type Name="viewVideo">
+      <Column Name="VideoName" Type="System.String" DbType="NChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="SharedTo" Type="System.String" DbType="NChar(999)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fd9270ed-3316-486e-89f8-1338dab87925" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50939/Insert.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Insert.xsd" MetadataType="Schema" ID="2fc0eacc-29a0-4a6c-8051-7cac2a0fbe06" SourceId="1" SourceUrl="http://localhost:50939/Insert.svc?xsd=xsd0" />
+    <MetadataFile FileName="Insert.wsdl" MetadataType="Wsdl" ID="a61af41b-9f33-400e-85cd-bf5a17937761" SourceId="1" SourceUrl="http://localhost:50939/Insert.svc?wsdl" />
+    <MetadataFile FileName="Insert.disco" MetadataType="Disco" ID="7f8157de-ecac-4ed2-a1dc-4aa42b2638d0" SourceId="1" SourceUrl="http://localhost:50939/Insert.svc?disco" />
+    <MetadataFile FileName="Insert1.xsd" MetadataType="Schema" ID="dda9c06e-ffcc-454a-84a9-9fe17ca5d774" SourceId="1" SourceUrl="http://localhost:50939/Insert.svc?xsd=xsd2" />
+    <MetadataFile FileName="Insert2.xsd" MetadataType="Schema" ID="dcbe6810-4f4b-4c32-b132-20064e723e3b" SourceId="1" SourceUrl="http://localhost:50939/Insert.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

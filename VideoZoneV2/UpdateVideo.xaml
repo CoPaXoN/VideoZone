@@ -1,0 +1,29 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="VideoZoneV2.UpdateVideo"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-129,-223">
+
+        <TextBox x:Name="txtVideoName" HorizontalAlignment="Left" Height="23" Margin="93,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332"
+			Text="{Binding VideoName, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnNotifyDataErrors=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" TextChanged="txtVideoName_TextChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="11,131,0,0" VerticalAlignment="Top" Width="120" Content=" Video Name:"/>
+        <sdk:Label HorizontalAlignment="Left" Height="28" Margin="1,102,0,0" VerticalAlignment="Top" Width="120" Content=" Hello" x:Name="lbl1"/>
+        <sdk:Label HorizontalAlignment="Left" Height="16" Margin="11,159,0,0" VerticalAlignment="Top" Width="73" Content=" Category:"/>
+        <sdk:Label HorizontalAlignment="Left" Height="18" Margin="11,191,0,0" VerticalAlignment="Top" Width="54" Content="Share to:"/>
+        <TextBox x:Name="ShareTxt" HorizontalAlignment="Left" IsEnabled="False" Height="33" Margin="18,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" TextChanged="ShareTxt_TextChanged"/>
+        <sdk:Label HorizontalAlignment="Left" Height="23" Margin="170,212,0,0" VerticalAlignment="Top" Width="300" Content="(Separate multiple user names with a semi-colon ',')"/>
+        <CheckBox x:Name="EveryoneCb" IsChecked="true" Content="everyone" HorizontalAlignment="Left" Margin="93,190,0,0" VerticalAlignment="Top" Checked="EveryoneCb_Checked" Unchecked="EveryoneCb_Unchecked" />
+        <TextBlock HorizontalAlignment="Left" Margin="11,212,0,0" TextWrapping="Wrap" Text="or share to specific users:" VerticalAlignment="Top"/>
+        <sdk:ValidationSummary Margin="18,318,18,96" x:Name="vldSum" />
+        <ComboBox x:Name="cbCategory" HorizontalAlignment="Left" Margin="93,164,0,0" VerticalAlignment="Top" Width="332"/>
+        <Image x:Name="subject" HorizontalAlignment="Left" Height="64" Margin="43,10,0,0" VerticalAlignment="Top" Width="461" Stretch="None" Source="Images/UpdateVideo.png"/>
+        <Image MouseLeftButtonUp="Button_Click_1" HorizontalAlignment="Left" Height="51" Margin="10,262,0,0" VerticalAlignment="Top" Width="100" Stretch="None" Source="Images/UpdateBtn.png"/>
+        <Image MouseLeftButtonUp="Button_Click" HorizontalAlignment="Left" Height="51" Margin="404,262,0,0" VerticalAlignment="Top" Width="100" Stretch="None" Source="Images/Back.png"/>
+
+    </Grid>
+</UserControl>

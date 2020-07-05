@@ -1,0 +1,32 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_Insert" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_Upload" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_Insert1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_Upload1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:50939/Insert.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_Insert" contract="InsertDataSrv.Insert"
+                name="BasicHttpBinding_Insert" />
+            <endpoint address="http://localhost:50939/Upload.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_Upload" contract="UploadService.Upload"
+                name="BasicHttpBinding_Upload" />
+        </client>
+    </system.serviceModel>
+</configuration>

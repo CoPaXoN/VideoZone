@@ -1,0 +1,21 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="VideoZoneV2.Search"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,-194,-67">
+        <TextBox x:Name="SearchTxt" HorizontalAlignment="Left" Height="23" Margin="22,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="278"/>
+        <ComboBox x:Name="SearchCb" HorizontalAlignment="Left" Margin="413,74,0,0" VerticalAlignment="Top" Width="86"/>
+
+        <sdk:DataGrid x:Name="dgResults" HorizontalAlignment="Left" Height="201" Margin="22,111,0,0" VerticalAlignment="Top" Width="550"/>
+        <Image x:Name="subject" HorizontalAlignment="Left" Height="64" Margin="43,10,0,0" VerticalAlignment="Top" Width="461" Stretch="None" Source="Images/SearchLogo.png"/>
+        <Image x:Name="Search" MouseLeftButtonUp="Button_Click" HorizontalAlignment="Left" Height="59" Margin="305,52,0,0" VerticalAlignment="Top" Width="107" Stretch="None" Source="Images/Search.png" />
+        <Image x:Name="View" MouseLeftButtonUp="Button_Click_1" HorizontalAlignment="Left" Height="59" Margin="499,52,-12,0" VerticalAlignment="Top" Width="107" Stretch="None" Source="Images/View.png" />
+        <Image x:Name="Back" MouseLeftButtonUp="Button_Click_2" HorizontalAlignment="Left" Height="59" Margin="477,312,0,-4" VerticalAlignment="Top" Width="107" Stretch="None" Source="Images/Back.png" />
+
+    </Grid>
+</UserControl>
